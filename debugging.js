@@ -11,7 +11,7 @@ function calculateSum(){
     console.log("I've been clicked")
 	console.log(num1.value, num2.value)
 
-    let total = sum(num1.value, num2.value)
+    let total = sum(parseInt(num1.value), parseInt(num2.value))
 
     answer = document.querySelector("#answer")
     answer.innerHTML = total
@@ -20,10 +20,10 @@ function calculateSum(){
 function sum(a, b){
     let sum = 0
 
-    for(i = a; i < b; i+=2){
+    for(i = a; i <= b; i+=1){
         sum += i
     }
 
-    return sum
+    return parseInt(sum);
 
 }
